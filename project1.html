@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .cover {
+            background-color: gray;
+            width: 100vw;
+        }
+
+        .menubar_topside {
+            margin: auto;
+            width: 75vw;
+            height: 10vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu {
+            margin: auto;
+            height: 10vh;
+            width: 100%;
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        .soundcloud_img {
+            background-image: url(./img/soundcloud-logo.png);
+            background-repeat: no-repeat;
+            background-size: 70px;
+            background-position: center;
+            transition: 0.3s;
+        }
+
+        .soundcloud_img:hover {
+            background-image: url(./img/soundcloud.png);
+            background-repeat: no-repeat;
+            background-size: 70px;
+            background-position: center;
+        }
+
+        .home {
+            margin: auto;
+            transition: 0.3s;
+        }
+
+        .library {
+            margin: auto;
+            transition: 0.3s;
+        }
+
+        .search {
+            height: 30px;
+            border: 1px solid black;
+            background-color: rgb(206, 205, 205);
+            border-radius: 10px;
+            flex-grow: 1;
+            margin: 20px;
+        }
+
+        .loupe {
+            display: flex;
+            justify-content: center;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: darkgray;
+            width: 60px;
+            height: 28px;
+            transition: 0.3s;
+        }
+
+        .loupe:hover {
+            cursor: pointer;
+            background-color: rgb(190, 38, 38);;
+        }
+
+        .home:hover {
+            cursor: pointer;
+            color: white;
+            font-weight: 700;
+            scale: 1.3;
+        }
+
+        .library:hover {
+            cursor: pointer;
+            color: white;
+            font-weight: 700;
+            scale: 1.3;
+        }
+
+        .soundcloud_img:hover {
+            cursor: pointer;
+        }
+
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            height: 80vh;
+        }
+
+        .notification {
+            width: 100%;
+            height: 7vh;
+            display: flex;
+            background-color: rgb(253, 127, 127);
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .membership {
+            font-size: small;
+            margin: 0 10px;
+        }
+
+        .join {
+            width: 10vw;
+            border: 2px solid rgb(199, 60, 60);
+            border-radius: 50px;
+            font-size: 11px;
+            padding: 2px;
+            background-color: rgb(190, 38, 38);
+            text-align: center;
+            padding: 7px 0;
+            transition: 0.5s;
+        }
+
+        .join:hover {
+            cursor: pointer;
+            background-color: aqua;
+            font-size: large;
+        }
+
+        .suggestion {
+            letter-spacing: 2px;
+            border-bottom: 2px solid gray;
+        }
+
+        .suggestion:hover {
+            cursor: pointer;
+        }
+
+        .suggestion_box {
+            margin: 10px 0;
+        }
+
+        .recently_played {
+            letter-spacing: 2px;
+            margin: 8px 0;
+            border-bottom: 2px solid gray;
+        }
+
+        .recently_played:hover {
+            cursor: pointer;
+        }
+
+        .album_container {
+            display: flex;
+            height: 30vh;
+        }
+
+        .album {
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .album:hover {
+            scale: 1.5;
+        }
+
+        .menubar_downside {
+            width: 70vw;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .user {
+            height: 8vh;
+            width: 4vw;
+            border: 2px solid rgb(199, 60, 60);
+            border-radius: 50%;
+            background-color: rgb(228, 92, 92);
+            margin-right: 20px;
+            transition: 0.3s;
+            font-size: large;
+        }
+
+        .user:hover {
+            cursor: pointer;
+            scale: 1.2;
+        }
+
+        iframe {
+            width: 230px;
+            height: 150px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="cover">
+        <div class="menubar_topside">
+            <div class="soundcloud_img menu" onclick="location.href='https://soundcloud.com/discover'">
+
+            </div>
+            <div class="menu">
+                <div class="home" onclick="location.href='https://soundcloud.com/discover'">
+                    HOME
+                </div>
+            </div>
+            <div class="menu">
+                <div class="library" onclick="location.href='https://soundcloud.com/you/library'">
+                    LIBRARY
+                </div>
+            </div>
+            <div class="menu">
+                <input type="text" class="search">
+                    <div class="loupe" onclick="location.href='https://soundcloud.com/discover'">
+                        <img src="./img/loupe.png" alt="">
+                    </div>
+                </input>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="notification">
+            <div class="membership">
+                Save now on our best plan for artists. Get unlimited uploads, exclusive tools, benefits.
+            </div>
+            <div class="join" onclick="location.href='https://soundcloud.com/discover'">
+                join for free
+            </div>
+        </div>
+        <div class="suggestion_box">
+            <div class="suggestion" onclick="location.href='https://soundcloud.com/discover'">
+                SUGGESTION
+            </div>
+            <div class="album_container">
+                <div class="album_1st album">
+                    <iframe
+                        src="https://www.youtube.com/embed/CJ59m66zHTQ?si=bKeJZm_pkDRw616C" title="YouTube video player" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                        <br>
+                        Silica gel
+                        <br>
+                        Desert Eagle
+                </div>
+                <div class="album_2nd album">
+                    <iframe
+                        src="https://www.youtube.com/embed/jOTfBlKSQYY?si=Ojp3mrx-kwblzqH2" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                        <br>
+                        NewJeans
+                        <br>
+                        ETA
+                </div>
+                <div class="album_3rd album">
+                    <iframe
+                        src="https://www.youtube.com/embed/pSUydWEqKwE?si=CoUNEziX9Xl5HQ0D" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                        <br>
+                        NewJeans
+                        <br>
+                        Ditto(side A)
+                </div>
+                <div class="album_4th album">
+                    <iframe
+                        src="https://www.youtube.com/embed/V37TaRdVUQY?si=a83lBuddy_vcbx-m" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                        <br>
+                        NewJeans
+                        <br>
+                        Ditto(side B)
+                </div>
+                <div class="album_5th album">
+                    <iframe
+                        src="https://www.youtube.com/embed/11cta61wi0g?si=EJWc9dEzSNKIbfAH" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                        <br>
+                        NewJeans
+                        <br>
+                        Hype Boy
+                </div>
+            </div>
+        </div>
+        <div class="suggestion_box">
+            <div class="recently_played" onclick="location.href='https://soundcloud.com/you/library'">
+                RECENTIY PLAYED
+            </div>
+            <div class="album_container">
+                <div class="album_1st album">
+                    <iframe
+                        src="https://www.youtube.com/embed/jOTfBlKSQYY?si=Ojp3mrx-kwblzqH2" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                        <br>
+                        NewJeans
+                        <br>
+                        ETA
+                </div>
+                <div class="album_2nd album">
+                        <iframe
+                        src="https://www.youtube.com/embed/CJ59m66zHTQ?si=bKeJZm_pkDRw616C" title="YouTube video player" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                        <br>
+                        Silica gel
+                        <br>
+                        Desert Eagle
+                </div>
+                <div class="album_3rd album">
+                    <iframe
+                        src="https://www.youtube.com/embed/V37TaRdVUQY?si=a83lBuddy_vcbx-m" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                        <br>
+                        NewJeans
+                        <br>
+                        Ditto(side B)
+                </div>
+                <div class="album_4th album">
+                        <iframe
+                        src="https://www.youtube.com/embed/pSUydWEqKwE?si=CoUNEziX9Xl5HQ0D" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                        <br>
+                        NewJeans
+                        <br>
+                        Ditto(side A)
+                </div>
+                <div class="album_5th album">
+                    <iframe
+                        src="https://www.youtube.com/embed/11cta61wi0g?si=EJWc9dEzSNKIbfAH" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                        <br>
+                        NewJeans
+                        <br>
+                        Hype Boy
+                </div>
+            </div>
+        </div>
+      
+    </div>
+    <div class="cover">
+        <div class="menubar_downside">
+            <div class="user">
+
+            </div>
+            <div class="join" onclick="location.href='https://soundcloud.com/discover'">
+                CREATE ACCOUNT
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
